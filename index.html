@@ -210,10 +210,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .card p{font-size:0.9rem;color:var(--cream-dim)}
 
 /* ---- quote band ---- */
-.quote-band{position:relative;text-align:center;background-image:url('https://images.unsplash.com/photo-1551621962-b8f40dee2f2c?q=80&w=1600&auto=format&fit=crop');background-attachment:fixed;background-size:cover;background-position:center;background-color:var(--void)}
+.quote-band{position:relative;text-align:center;background-image:url('https://images.unsplash.com/photo-1551621962-b8f40dee2f2c?q=80&w=1600&auto=format&fit=crop');background-attachment:fixed;background-size:cover;background-position:center;background-color:var(--void);box-shadow:0 8px 48px rgba(0,0,0,0.7),0 -8px 48px rgba(0,0,0,0.7)}
 .quote-band::before{content:"";position:absolute;inset:0;z-index:0;background:rgba(10,8,6,0.72)}
-.quote-band::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,var(--void) 0%,transparent 25%,transparent 75%,var(--void) 100%)}
-.quote-band .wrap{position:relative;z-index:2}
+.quote-band .wrap{position:relative;z-index:1}
 @media(hover:none){.quote-band{background-attachment:scroll}}
 .quote-band blockquote{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.7rem,4.4vw,3.2rem);line-height:1.28;max-width:18ch;margin:0 auto;font-weight:300}
 .quote-band cite{display:block;margin-top:1.8rem;font-style:normal;font-family:'Mulish',sans-serif;font-size:0.74rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold)}
