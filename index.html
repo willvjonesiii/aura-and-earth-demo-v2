@@ -29,11 +29,17 @@
   --void:#17110d;
   --ink:#241a13;
   --ink-2:#2e2118;
+  /* brand primaries — pulled directly from the wordmark */
+  --aura:#d4a03a;
+  --aura-lt:#e8be6a;
+  --aura-deep:#1c1708;   /* gold-tinted dark — sunlight depth */
+  --earth:#7a4e2d;
+  --earth-lt:#a07050;
+  --earth-deep:#140e09;  /* soil-tinted dark — root depth */
   --ember:#a8392a;
   --ember-lt:#cf5b3f;
   --gold:#c69a5c;
   --gold-lt:#e3c592;
-  --clay:#b0764e;
   --sand:#d8c4a6;
   --cream:#f3ebdd;
   --cream-dim:rgba(243,235,221,0.72);
@@ -167,16 +173,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   padding:0.5rem 0.8rem;border-radius:3px;line-height:1.45;font-weight:500;
 }
 
-/* ---- marquee ---- */
-.marquee{background:var(--ink);border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);overflow:hidden;padding:1.15rem 0}
-.marquee-track{display:flex;white-space:nowrap;width:max-content;animation:scrollx 38s linear infinite}
-.marquee:hover .marquee-track{animation-play-state:paused}
-.marquee span{font-family:'Fraunces',serif;font-style:italic;font-size:1.25rem;color:var(--sand);padding:0 1.6rem;letter-spacing:0.01em}
-.marquee span .dot{color:var(--ember-lt);font-style:normal;margin-left:1.4rem}
-@keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ---- about / the healer ---- */
-.about{background:var(--void)}
+.about{background:var(--earth-deep)}
 .about-grid{display:grid;grid-template-columns:0.95fr 1.05fr;gap:clamp(2rem,5vw,5rem);align-items:center}
 .about-photo{position:relative}
 .about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 25%;border-radius:2px}
@@ -191,7 +190,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 }
 
 /* ---- the work ---- */
-.work{background:var(--ink)}
+.work{background:var(--aura-deep)}
 .sec-head{max-width:var(--maxw);margin:0 auto;text-align:center;margin-bottom:clamp(2.5rem,6vw,4rem)}
 .sec-head h2{font-size:clamp(2.1rem,5vw,3.6rem);margin:1rem 0 1rem}
 .sec-head p{color:var(--cream-dim);max-width:48ch;margin:0 auto}
@@ -220,9 +219,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .quote-band cite{display:block;margin-top:1.8rem;font-style:normal;font-family:'Mulish',sans-serif;font-size:0.74rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold)}
 
 /* ---- pilgrimages ---- */
-.pilg{background:var(--void)}
+.pilg{background:var(--earth-deep)}
 .pilg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
-.pcard{position:relative;overflow:hidden;border:1px solid var(--hairline);border-radius:2px;display:flex;flex-direction:column;background:var(--ink)}
+.pcard{position:relative;overflow:hidden;border:1px solid var(--hairline);border-radius:2px;display:flex;flex-direction:column;background:#1a1209}
 .pcard-img{height:230px;background-size:cover;background-position:center;position:relative}
 .pcard-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(36,26,19,0.85),transparent 60%)}
 .pcard-body{padding:1.7rem 1.6rem 1.9rem;display:flex;flex-direction:column;flex:1}
@@ -237,7 +236,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .pilg-note{text-align:center;color:var(--cream-dim);font-size:0.82rem;margin-top:2rem}
 
 /* ---- waitlist ---- */
-.waitlist{position:relative;overflow:hidden;background:var(--ink-2)}
+.waitlist{position:relative;overflow:hidden;background:var(--aura-deep)}
 .waitlist .wbg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:0.2}
 .waitlist::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,var(--void),rgba(46,33,24,0.5),var(--void))}
 .waitlist .wrap{position:relative;z-index:2}
@@ -320,14 +319,14 @@ body.a11y .nav{background:#fff;border-bottom:2px solid #16120d;opacity:1;pointer
 body.a11y .nav.scrolled{background:#fff}
 body.a11y .brand,body.a11y .hero h1,body.a11y h1,body.a11y h2,body.a11y h3,body.a11y h4{color:#16120d;font-weight:600}
 body.a11y .eyebrow,body.a11y .brand-sub,body.a11y .pcard .loc,body.a11y .foot-col h4,body.a11y form#waitForm label,body.a11y .quote-band cite{color:#7a2a1d;font-size:0.95rem}
-body.a11y .sub,body.a11y p,body.a11y .nav-links a,body.a11y .card p,body.a11y .pcard p,body.a11y .foot-col a,body.a11y .foot-col p,body.a11y .wl-list li,body.a11y .marquee span,body.a11y .cream-dim{color:#16120d}
+body.a11y .sub,body.a11y p,body.a11y .nav-links a,body.a11y .card p,body.a11y .pcard p,body.a11y .foot-col a,body.a11y .foot-col p,body.a11y .wl-list li,body.a11y .cream-dim{color:#16120d}
 body.a11y .nav-links a,body.a11y .foot-col a{font-size:0.98rem;text-decoration:underline;color:#0057b8}
 body.a11y .nav-links a,body.a11y .btn,body.a11y .foot-col a,body.a11y .pcta,body.a11y a{min-height:44px}
 body.a11y .it-gold,body.a11y .pullquote,body.a11y .pcard .invest,body.a11y .quote-band blockquote{color:#7a2a1d;font-weight:500}
 body.a11y .hero-grad{background:linear-gradient(to top,rgba(255,255,255,0.96),rgba(255,255,255,0.7))}
 body.a11y .hero-grad-2{background:linear-gradient(to right,rgba(255,255,255,0.85),rgba(255,255,255,0.2))}
 body.a11y .hero h1,body.a11y .hero .sub{color:#16120d}
-body.a11y .work,body.a11y .marquee,body.a11y footer{background:#f3efe7}
+body.a11y .work,body.a11y .pilg,body.a11y .about,body.a11y .waitlist,body.a11y footer{background:#f3efe7}
 body.a11y .card-overlay{background:linear-gradient(to top,rgba(255,255,255,0.95) 10%,rgba(255,255,255,0.55) 70%)}
 body.a11y .card h3,body.a11y .card p,body.a11y .card .num{color:#16120d}
 body.a11y .btn{border-color:#16120d;color:#16120d;font-size:0.8rem}
@@ -458,27 +457,6 @@ body.a11y .hero-bg{animation:none}
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Oracle &amp; Tarot<span class="dot">✦</span></span>
-    <span>Egg Cleanses<span class="dot">✦</span></span>
-    <span>Road Openers<span class="dot">✦</span></span>
-    <span>House Cleansing<span class="dot">✦</span></span>
-    <span>African Cupping<span class="dot">✦</span></span>
-    <span>Shadow Work<span class="dot">✦</span></span>
-    <span>Coaching &amp; Speaking<span class="dot">✦</span></span>
-    <span>Sacred Pilgrimage<span class="dot">✦</span></span>
-    <span>Oracle &amp; Tarot<span class="dot">✦</span></span>
-    <span>Egg Cleanses<span class="dot">✦</span></span>
-    <span>Road Openers<span class="dot">✦</span></span>
-    <span>House Cleansing<span class="dot">✦</span></span>
-    <span>African Cupping<span class="dot">✦</span></span>
-    <span>Shadow Work<span class="dot">✦</span></span>
-    <span>Coaching &amp; Speaking<span class="dot">✦</span></span>
-    <span>Sacred Pilgrimage<span class="dot">✦</span></span>
-  </div>
-</div>
 
 <!-- ABOUT / THE HEALER -->
 <section class="about" id="about">
