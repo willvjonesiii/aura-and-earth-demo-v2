@@ -120,7 +120,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .nav-toggle span{display:block;width:26px;height:2px;background:var(--cream);transition:.3s}
 
 /* ---- hero ---- */
-.hero{position:relative;min-height:100dvh;display:flex;align-items:center;justify-content:center;overflow:hidden;text-align:center}
+.hero{position:sticky;top:0;height:100dvh;display:flex;align-items:center;justify-content:center;overflow:hidden;text-align:center;z-index:1}
 .hero-bg{position:absolute;inset:0;z-index:0;background:var(--void);transform-origin:center center;animation:breathe 10s ease-in-out infinite}
 @keyframes breathe{0%,100%{transform:scale(1.0)}50%{transform:scale(1.04)}}
 .hero-bg img{
@@ -211,7 +211,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .card p{font-size:0.9rem;color:var(--cream-dim)}
 
 /* ---- quote band ---- */
-.quote-band{position:relative;text-align:center;overflow:hidden}
+.quote-band{position:relative;text-align:center;overflow:hidden;z-index:2;border-radius:2rem 2rem 0 0;margin-top:-2rem}
 .quote-band .qbg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:0.28;filter:saturate(0.85)}
 .quote-band::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,var(--void),rgba(23,17,13,0.55),var(--void))}
 .quote-band .wrap{position:relative;z-index:2}
