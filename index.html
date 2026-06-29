@@ -121,14 +121,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .hero{position:relative;min-height:100dvh;display:flex;align-items:center;justify-content:center;overflow:hidden;text-align:center}
 .hero-bg{position:absolute;inset:0;z-index:0;background:var(--void)}
 .hero-bg img{
-  width:100%;height:100%;object-fit:cover;object-position:center 55%;
+  width:100%;height:100%;object-fit:cover;object-position:center 40%;
   transform:scale(1.08) translateZ(0);will-change:transform;transition:transform 8s ease;
 }
 .hero-bg img.loaded{transform:scale(1.06) translateZ(0)}
 .hero-grad{position:absolute;inset:0;z-index:1;
-  background:radial-gradient(ellipse 70% 80% at 50% 50%,rgba(10,8,6,0.08) 0%,rgba(10,8,6,0.18) 45%,rgba(10,8,6,0.72) 100%);
+  background:radial-gradient(ellipse 60% 70% at 50% 46%,rgba(10,8,6,0.28) 0%,rgba(10,8,6,0.55) 55%,rgba(10,8,6,0.88) 100%);
 }
-.hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:0 2rem;margin-top:-10vh}
+.hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:0 2rem;margin-top:-18vh}
 .hero-emblem{margin-bottom:1.2rem;opacity:0.9}
 .hero-wordmark{
   font-family:'Cinzel',serif;font-weight:400;
@@ -140,8 +140,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .hero-name{
   font-family:'Cinzel',serif;font-size:clamp(0.58rem,0.95vw,0.72rem);
   letter-spacing:0.5em;text-transform:uppercase;
-  color:rgba(243,235,221,0.78);margin-top:0.9rem;
-  text-shadow:0 1px 12px rgba(10,8,6,0.6);
+  color:#c42020;margin-top:0.9rem;
+  text-shadow:0 1px 18px rgba(180,20,20,0.55);
 }
 .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:2rem}
 .hero .btn{padding:0.8rem 2.2rem;font-size:0.65rem;letter-spacing:0.22em;border-color:rgba(243,235,221,0.55);color:var(--cream)}
