@@ -20,7 +20,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="preload" as="image" href="635282635_2676193369420511_901645791334053077_n.jpg">
 
@@ -118,23 +118,33 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .nav-toggle span{display:block;width:26px;height:2px;background:var(--cream);transition:.3s}
 
 /* ---- hero ---- */
-.hero{position:relative;min-height:100dvh;display:flex;align-items:flex-end;overflow:hidden;padding-top:5.5rem}
+.hero{position:relative;min-height:100dvh;display:flex;align-items:center;justify-content:center;overflow:hidden;text-align:center}
 .hero-bg{position:absolute;inset:0;z-index:0;background:var(--void)}
 .hero-bg img{
-  width:100%;height:100%;object-fit:cover;object-position:center 70%;
-  transform:scale(1.08) translateZ(0);will-change:transform;transition:transform 8s ease;opacity:.92;
+  width:100%;height:100%;object-fit:cover;object-position:center 55%;
+  transform:scale(1.08) translateZ(0);will-change:transform;transition:transform 8s ease;
 }
 .hero-bg img.loaded{transform:scale(1.06) translateZ(0)}
 .hero-grad{position:absolute;inset:0;z-index:1;
-  background:linear-gradient(to top,rgba(20,15,11,0.98) 0%,rgba(20,15,11,0.82) 32%,rgba(20,15,11,0.5) 62%,rgba(20,15,11,0.55) 88%,rgba(20,15,11,0.7) 100%);
+  background:radial-gradient(ellipse 70% 80% at 50% 50%,rgba(10,8,6,0.08) 0%,rgba(10,8,6,0.18) 45%,rgba(10,8,6,0.72) 100%);
 }
-.hero-grad-2{position:absolute;inset:0;z-index:1;background:linear-gradient(to right,rgba(20,15,11,0.82) 0%,rgba(20,15,11,0.25) 52%,transparent 100%)}
-.hero-inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.4rem,5vw,4rem) clamp(3.5rem,9vw,7rem)}
-.hero h1{font-size:clamp(2.9rem,8.2vw,6.6rem);max-width:14ch;margin:1.4rem 0 1.6rem;font-weight:300;text-shadow:0 2px 30px rgba(20,15,11,0.6)}
-.hero .sub{max-width:50ch;font-size:clamp(1rem,1.4vw,1.18rem);color:var(--cream-dim);margin-bottom:2.3rem;text-shadow:0 1px 16px rgba(20,15,11,0.7)}
-.hero .eyebrow{text-shadow:0 1px 14px rgba(20,15,11,0.8)}
-.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
-.hero .btn{padding:1rem 1.9rem;font-size:0.76rem}
+.hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:0 2rem}
+.hero-emblem{margin-bottom:1.4rem;opacity:0.85}
+.hero-wordmark{
+  font-family:'Cinzel',serif;font-weight:400;
+  font-size:clamp(2.2rem,7.5vw,6.2rem);
+  letter-spacing:0.28em;text-transform:uppercase;
+  color:var(--cream);line-height:1;
+  text-shadow:0 2px 40px rgba(10,8,6,0.5);
+}
+.hero-name{
+  font-family:'Cinzel',serif;font-size:clamp(0.6rem,1.1vw,0.78rem);
+  letter-spacing:0.52em;text-transform:uppercase;
+  color:rgba(243,235,221,0.75);margin-top:1rem;
+  text-shadow:0 1px 16px rgba(10,8,6,0.6);
+}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:2.4rem}
+.hero .btn{padding:0.85rem 2.4rem;font-size:0.68rem;letter-spacing:0.22em;border-color:rgba(243,235,221,0.55);color:var(--cream)}
 .photo-flag{
   position:absolute;z-index:3;bottom:1rem;right:1rem;max-width:min(86vw,420px);
   background:rgba(168,57,42,0.92);color:#fff;font-size:0.66rem;letter-spacing:0.06em;
@@ -313,6 +323,9 @@ body.a11y form#waitForm input,body.a11y form#waitForm select,body.a11y form#wait
 body.a11y .cursor,body.a11y .cursor-ring{display:none}
 body.a11y *{animation:none !important}
 body.a11y .hero .hr,body.a11y .rv{opacity:1 !important;transform:none !important}
+body.a11y .hero-wordmark{color:#fff;text-shadow:0 1px 6px rgba(0,0,0,0.8)}
+body.a11y .hero-name{color:rgba(255,255,255,0.85)}
+body.a11y .hero-grad{background:rgba(10,8,6,0.55)}
 
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){
@@ -355,14 +368,25 @@ body.a11y .hero .hr,body.a11y .rv{opacity:1 !important;transform:none !important
     <img id="heroImg" src="635282635_2676193369420511_901645791334053077_n.jpg" alt="Goddess Aje Nafia Holmes" fetchpriority="high">
   </div>
   <div class="hero-grad"></div>
-  <div class="hero-grad-2"></div>
   <div class="hero-inner">
-    <span class="eyebrow hr d1">Energy Work · Ritual · Sacred Pilgrimage</span>
-    <h1 class="hr d2">Lay down what you were never meant to <span class="it-gold">carry</span>.</h1>
-    <p class="sub hr d3">Sacred energy work, ritual, and women's pilgrimages led by Goddess Aje Nafia Holmes. For the rest, the release, and the remembering you were never given permission to claim.</p>
+    <svg class="hero-emblem hr d1" width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <line x1="26" y1="2" x2="26" y2="50" stroke="rgba(243,235,221,0.65)" stroke-width="0.6"/>
+      <line x1="2" y1="26" x2="50" y2="26" stroke="rgba(243,235,221,0.65)" stroke-width="0.6"/>
+      <line x1="7.8" y1="7.8" x2="44.2" y2="44.2" stroke="rgba(243,235,221,0.65)" stroke-width="0.6"/>
+      <line x1="44.2" y1="7.8" x2="7.8" y2="44.2" stroke="rgba(243,235,221,0.65)" stroke-width="0.6"/>
+      <line x1="26" y1="2" x2="26" y2="12" stroke="rgba(243,235,221,0.9)" stroke-width="0.8"/>
+      <line x1="26" y1="40" x2="26" y2="50" stroke="rgba(243,235,221,0.9)" stroke-width="0.8"/>
+      <line x1="2" y1="26" x2="12" y2="26" stroke="rgba(243,235,221,0.9)" stroke-width="0.8"/>
+      <line x1="40" y1="26" x2="50" y2="26" stroke="rgba(243,235,221,0.9)" stroke-width="0.8"/>
+      <line x1="26" y1="2" x2="32" y2="8" stroke="rgba(243,235,221,0.45)" stroke-width="0.5"/>
+      <line x1="26" y1="2" x2="20" y2="8" stroke="rgba(243,235,221,0.45)" stroke-width="0.5"/>
+      <circle cx="26" cy="26" r="2.5" fill="rgba(243,235,221,0.8)"/>
+      <circle cx="26" cy="26" r="5" stroke="rgba(243,235,221,0.3)" stroke-width="0.5" fill="none"/>
+    </svg>
+    <h1 class="hero-wordmark hr d2">Aura and Earth</h1>
+    <p class="hero-name hr d3">Goddess Aje</p>
     <div class="hero-cta hr d4">
-      <a href="#waitlist" class="btn btn-solid">Join the Waitlist</a>
-      <a href="#work" class="btn">Explore the Work</a>
+      <a href="#waitlist" class="btn">Join the Waitlist</a>
     </div>
   </div>
 </header>
