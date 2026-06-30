@@ -68,8 +68,8 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300;}
 .btn-ghost{font-family:'Hanken Grotesk',sans-serif;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;padding:15px 38px;border:1px solid rgba(212,137,154,.5);color:var(--rose-pale);transition:all .35s;display:inline-block;}
 .btn-ghost:hover{background:var(--rose-pale);color:var(--dark);}
 /* CTA reach-out button — filled by default, ghost on hover */
-.cta .btn-ghost{background:var(--rose-pale);color:var(--dark);border-color:var(--rose-pale);}
-.cta .btn-ghost:hover{background:transparent;color:var(--rose-pale);border-color:rgba(212,137,154,.5);}
+.cta .btn-ghost{background:#fbeede;color:#8a3d1c;border-color:#fbeede;}
+.cta .btn-ghost:hover{background:transparent;color:#fbeede;border-color:rgba(251,238,222,.6);}
 .btn-fill{font-family:'Hanken Grotesk',sans-serif;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;padding:15px 38px;background:var(--rose);color:#fff;border:1px solid var(--rose);transition:all .35s;display:inline-block;}
 .btn-fill:hover{background:var(--rose-deep);border-color:var(--rose-deep);}
 .hero-content > *{opacity:0;animation:hUp .9s cubic-bezier(.16,1,.3,1) forwards;}
@@ -211,7 +211,10 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300;}
 .btn-card:hover{background:var(--rose);border-color:var(--rose);color:#fff;}
 
 /* TESTIMONIALS */
-.testimonials{background:var(--rose-deep);padding:120px 72px;}
+.testimonials{position:relative;padding:120px 72px;background:#1a1510 url('https://images.unsplash.com/photo-1580494412804-90550d4638a1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover;background-attachment:fixed;}
+.testimonials::before{content:'';position:absolute;inset:0;background:rgba(18,13,9,.80);pointer-events:none;}
+@media(hover:none){.testimonials{background-attachment:scroll}}
+.testi-hd,.testi-grid{position:relative;z-index:1;}
 .testi-hd{text-align:center;margin-bottom:68px;}
 .testi-hd h2{color:#fff;font-size:clamp(24px,3.5vw,44px);}
 .testi-hd h2 em{font-style:italic;color:var(--rose-pale);}
@@ -222,13 +225,13 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300;}
 .testi-card cite{font-family:'Hanken Grotesk',sans-serif;font-size:.54rem;letter-spacing:.28em;text-transform:uppercase;color:var(--rose-pale);font-style:normal;opacity:.72;}
 
 /* CTA — parallax section */
-.cta{position:relative;min-height:720px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.cta{position:relative;min-height:720px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(160deg,#b5572a 0%,#8a3d1c 100%);}
 .cta-bg{position:absolute;left:0;right:0;top:-20%;width:100%;height:140%;object-fit:cover;will-change:transform;}
-.cta-grad{position:absolute;inset:0;background:linear-gradient(160deg,rgba(24,10,16,.7),rgba(122,40,66,.72));}
+.cta-grad{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 38%,transparent 0%,rgba(74,28,12,.5) 100%);pointer-events:none;}
 .cta-body{position:relative;z-index:2;text-align:center;padding:0 10%;color:#fff;}
 .cta-body h2{font-size:clamp(26px,5vw,58px);line-height:1.2;margin-bottom:22px;font-weight:300;}
-.cta-body h2 em{font-style:italic;color:var(--rose-pale);}
-.cta-body p{font-size:1rem;line-height:1.82;color:rgba(255,255,255,.65);max-width:520px;margin:0 auto 40px;}
+.cta-body h2 em{font-style:italic;color:#fbeede;}
+.cta-body p{font-size:1rem;line-height:1.82;color:rgba(255,255,255,.85);max-width:520px;margin:0 auto 40px;}
 
 /* IG FEED */
 .ig-feed{background:var(--parch);padding-top:84px;}
@@ -293,13 +296,13 @@ footer{background:var(--dark);padding:76px 72px 40px;}
 /* ── CONTACT FORM ── */
 .contact-form{max-width:480px;margin:32px auto 0;text-align:left;}
 .form-field{margin-bottom:26px;}
-.form-field label{display:block;font-family:'Cinzel',serif;font-size:.52rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(212,137,154,.75);margin-bottom:10px;}
+.form-field label{display:block;font-family:'Cinzel',serif;font-size:.52rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:10px;}
 .form-field input,.form-field textarea{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.2);color:#fff;font-family:'Hanken Grotesk',sans-serif;font-weight:300;font-size:.95rem;padding:10px 0;outline:none;transition:border-color .3s;-webkit-appearance:none;}
 .form-field input::placeholder,.form-field textarea::placeholder{color:rgba(255,255,255,.28);}
 .form-field input:focus,.form-field textarea:focus{border-bottom-color:var(--rose-pale);}
 .form-field textarea{resize:none;height:100px;}
 .form-status{font-size:.8rem;letter-spacing:.06em;margin-top:18px;text-align:center;min-height:1.4em;}
-.form-status.ok{color:var(--rose-pale);}
+.form-status.ok{color:#fbeede;}
 .form-status.err{color:#e8a0a0;}
 
 /* ── GRAFTED HERO (from main build) ── */
@@ -313,8 +316,8 @@ footer{background:var(--dark);padding:76px 72px 40px;}
 .ae-hero-emblem{position:absolute;top:5rem;left:0;right:0;margin:0 auto;display:block;z-index:2;opacity:0;animation:aegrowIn 1.6s cubic-bezier(0.16,1,0.3,1) 0.1s forwards;}
 .ae-hero-wordmark{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(2.2rem,5.2vw,5rem);letter-spacing:0.22em;text-transform:uppercase;line-height:1;}
 .w-aura{color:#d4a03a}
-.w-earth{color:#7a4e2d}
-.w-and{background:linear-gradient(135deg,#d4a03a 50%,#7a4e2d 50%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+.w-earth{color:#9c6b41}
+.w-and{color:#b8895a}
 .ae-hero-name{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(0.85rem,1.4vw,1.1rem);letter-spacing:0.42em;text-transform:uppercase;color:#c42020;margin-top:2.2rem;text-shadow:0 1px 18px rgba(180,20,20,0.55);}
 .ae-hero-bottom{position:absolute;bottom:clamp(2rem,4vh,3.5rem);left:0;right:0;z-index:2;display:flex;justify-content:center;opacity:0;animation:aefadeIn .9s ease .72s forwards}
 @keyframes aefadeIn{from{opacity:0}to{opacity:1}}
@@ -401,7 +404,7 @@ footer{background:var(--dark);padding:76px 72px 40px;}
 
 <div class="diosa">
   <div class="diosa-inner" id="diosa-inner">
-    <p class="eyebrow eyebrow-c rv" style="color:var(--rose-pale);">The Mission &nbsp;&middot;&nbsp; <span style="background:linear-gradient(90deg,#d4a03a,#a87a4f);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">Aura &amp; Earth</span></p>
+    <p class="eyebrow eyebrow-c rv" style="color:var(--rose-pale);">The Mission &nbsp;&middot;&nbsp; Aura &amp; Earth</p>
     <div class="divider rv"></div>
     <p class="rv">Aura and Earth blends sophisticated natural elements with ancestral modalities to create space for deep emotional and physical rejuvenation. Led by an author, speaker, and coach, our programs move women through shadow work, road opening rituals, and international wellness pilgrimages.</p>
     <p class="rv">We believe rest is a radical act of reclamation, and we hold the structure, safety, and wisdom for women to step into their higher purpose without fear.</p>
@@ -511,10 +514,9 @@ footer{background:var(--dark);padding:76px 72px 40px;}
 </section>
 
 <section class="cta" id="contact">
-  <img src="https://images.unsplash.com/photo-1580494412804-90550d4638a1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="cta-bg" id="cta-bg">
   <div class="cta-grad"></div>
   <div class="cta-body rv">
-    <p class="eyebrow eyebrow-c" style="color:var(--rose-pale);">Your Rest Awaits</p>
+    <p class="eyebrow eyebrow-c" style="color:#fbeede;">Your Rest Awaits</p>
     <h2>Your nervous system<br>is waiting to exhale.<br><em>Come home a different woman.</em></h2>
     <p>Whether it is one session, one cleanse, or a two-week pilgrimage across Southeast Asia &mdash; the work starts the moment you decide to begin.</p>
     <form class="contact-form" id="contactForm" novalidate>
