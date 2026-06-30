@@ -313,8 +313,11 @@ footer{background:var(--dark);padding:76px 72px 40px;}
 @media(prefers-reduced-motion:reduce){.ae-hero-bg{animation:none}}
 .ae-hero-grad{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 60% 70% at 50% 46%,rgba(10,8,6,0.28) 0%,rgba(10,8,6,0.55) 55%,rgba(10,8,6,0.88) 100%);}
 .ae-hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:0 2rem;margin-top:-28vh}
+.ae-hero-rule{display:block;width:130px;height:1px;background:linear-gradient(to right,transparent,#d4a03a 30%,#d4a03a 70%,transparent);opacity:0;animation:aefadeIn .9s ease .5s forwards;}
+.ae-hero-rule.top{margin-bottom:2.2rem;}
+.ae-hero-rule.bot{margin-top:2.2rem;}
 .ae-hero-emblem{position:absolute;top:5rem;left:0;right:0;margin:0 auto;display:block;z-index:2;opacity:0;animation:aegrowIn 1.6s cubic-bezier(0.16,1,0.3,1) 0.1s forwards;}
-.ae-hero-wordmark{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(2.2rem,5.2vw,5rem);letter-spacing:0.22em;text-transform:uppercase;line-height:1;}
+.ae-hero-wordmark{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(2.6rem,7vw,7rem);letter-spacing:0.14em;text-transform:uppercase;line-height:1;position:relative;}
 .w-aura{color:#d4a03a}
 .w-earth{color:#9c6b41}
 .w-and{color:#b8895a}
@@ -328,7 +331,7 @@ footer{background:var(--dark);padding:76px 72px 40px;}
 .ae-hero .hr{opacity:0;animation:aegrowIn 1.6s cubic-bezier(0.16,1,0.3,1) forwards}
 .ae-hero .hr.d1{animation-delay:.1s}
 .ae-hero .hr.d2{animation-delay:.32s}
-@media(max-width:560px){.ae-hero-wordmark{font-size:clamp(2.2rem,11vw,3.4rem)}.ae-hero-emblem{top:3.5rem}}
+@media(max-width:560px){.ae-hero-wordmark{font-size:clamp(2.4rem,12vw,4rem);letter-spacing:0.12em}.ae-hero-emblem{top:3.5rem}.ae-hero-rule{width:90px}}
 /* ── GRAFTED QUOTE BAND (from main build) ── */
 .quote-band{position:relative;text-align:center;padding:clamp(80px,12vw,130px) 56px;background-image:url('https://images.unsplash.com/photo-1629532291436-51f30541a502?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');background-attachment:fixed;background-size:cover;background-position:center;background-color:var(--void)}
 .quote-band::before{content:"";position:absolute;inset:0;z-index:0;background:rgba(10,8,6,0.72)}
@@ -372,8 +375,10 @@ footer{background:var(--dark);padding:76px 72px 40px;}
     <circle cx="26" cy="26" r="5" stroke="rgba(243,235,221,0.3)" stroke-width="0.5" fill="none"/>
   </svg>
   <div class="ae-hero-inner">
+    <span class="ae-hero-rule top" aria-hidden="true"></span>
     <h1 class="ae-hero-wordmark hr d1"><span class="w-aura">Aura</span> <span class="w-and">And</span> <span class="w-earth">Earth</span></h1>
     <p class="ae-hero-name hr d2">Goddess Aje</p>
+    <span class="ae-hero-rule bot" aria-hidden="true"></span>
   </div>
   <div class="ae-hero-bottom">
     <a href="#contact" class="btn btn-forest">Join the Waitlist</a>
