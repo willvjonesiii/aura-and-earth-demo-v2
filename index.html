@@ -138,6 +138,16 @@ h1,h2,h3{font-family:'Fraunces',serif;font-weight:300;}
 .med-video-sub{font-size:.88rem;color:rgba(255,255,255,.38);letter-spacing:.06em;margin-bottom:36px;}
 .med-video-wrap{position:relative;width:100%;max-width:880px;margin:0 auto;aspect-ratio:16/9;border:1px solid rgba(170,68,102,.18);overflow:hidden;}
 .med-video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:none;}
+.med-video-link{position:absolute;inset:0;display:block;cursor:pointer;}
+.med-video-wrap .vthumb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform 6s ease;}
+.med-video-link:hover .vthumb{transform:scale(1.04);}
+.med-video-wrap::after{content:'';position:absolute;inset:0;background:rgba(26,21,16,.28);z-index:1;pointer-events:none;transition:background .35s;}
+.med-video-wrap:hover::after{background:rgba(26,21,16,.16);}
+.med-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:88px;height:88px;border-radius:50%;background:rgba(212,160,58,.94);display:flex;align-items:center;justify-content:center;z-index:2;box-shadow:0 0 0 0 rgba(212,160,58,.55);animation:playPulse 2.4s ease-out infinite;transition:background .3s,transform .3s;}
+.med-play::after{content:'';display:block;border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #1a1510;margin-left:6px;}
+.med-video-link:hover .med-play{background:rgba(232,190,106,1);transform:translate(-50%,-50%) scale(1.07);}
+@keyframes playPulse{0%{box-shadow:0 0 0 0 rgba(212,160,58,.55)}70%{box-shadow:0 0 0 32px rgba(212,160,58,0)}100%{box-shadow:0 0 0 0 rgba(212,160,58,0)}}
+@media(prefers-reduced-motion:reduce){.med-play{animation:none}.med-video-wrap .vthumb,.med-video-link:hover .vthumb{transition:none;transform:none}}
 .medicine-hd{text-align:center;margin-bottom:68px;}
 .medicine-hd h2{color:#fff;font-size:clamp(26px,4vw,50px);margin-bottom:14px;}
 .medicine-hd h2 em{font-style:italic;color:var(--rose-pale);}
@@ -436,7 +446,10 @@ footer{background:var(--dark);padding:76px 72px 40px;}
     <h3 class="med-video-title">See the <em>Work</em></h3>
     <p class="med-video-sub">A glimpse into the sacred practice</p>
     <div class="med-video-wrap">
-      <iframe src="https://www.youtube-nocookie.com/embed/Zm8Cipys1A8?rel=0&modestbranding=1" title="Aura &amp; Earth — Goddess Aje" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <a href="https://www.instagram.com/p/DaFrrHtKvC3/" target="_blank" rel="noopener" class="med-video-link" aria-label="Watch on Instagram">
+        <img class="vthumb" src="work-thumb.png" alt="Goddess Aje at work">
+        <span class="med-play" aria-hidden="true"></span>
+      </a>
     </div>
   </div>
 </section>
