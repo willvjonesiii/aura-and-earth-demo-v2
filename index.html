@@ -265,10 +265,13 @@ footer{background:var(--dark);padding:76px 72px 40px;}
 
 /* RESPONSIVE */
 @media(max-width:960px){
-  #nav{padding:22px 24px;display:flex;}#nav.scrolled{padding:16px 24px;}#nav .nav-cta-wrap{display:none;}
-  .nav-links{display:none;flex-direction:column;position:fixed;inset:0;background:rgba(24,10,16,.97);justify-content:center;align-items:center;gap:30px;z-index:100;}
-  .nav-links.open{display:flex;}.nav-links a{font-size:.72rem;}
-  .burger{display:flex;}
+  #nav{padding:22px 24px;display:flex;align-items:center;justify-content:space-between;}#nav.scrolled{padding:16px 24px;}
+  #nav .nav-cta-wrap{display:none;}
+  .burger{display:flex;margin-left:auto;order:99;}
+  .nav-links{display:none;flex-direction:column;position:fixed;inset:0;background:rgba(24,10,16,.97);justify-content:center;align-items:center;gap:30px;z-index:100;padding:0 24px;}
+  .nav-links.open{display:flex;}.nav-links a{font-size:.78rem;letter-spacing:.32em;}
+  .nav-links.open ~ .nav-cta-wrap{display:flex;position:fixed;left:0;right:0;bottom:14vh;justify-content:center;z-index:101;pointer-events:auto;}
+  .nav-links.open ~ .nav-cta-wrap .nav-cta{font-family:'Hanken Grotesk',sans-serif;font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;padding:14px 32px;}
   .med-grid{grid-template-columns:repeat(2,1fr);}
   .work-grid{grid-template-columns:1fr;}
   .about{grid-template-columns:1fr;padding:88px 28px;gap:52px;}
@@ -355,7 +358,6 @@ footer{background:var(--dark);padding:76px 72px 40px;}
     <li><a href="#about">The Healer</a></li>
     <li><a href="#medicine">The Work</a></li>
     <li><a href="#work">Pilgrimages</a></li>
-    <li><a href="#work">The Journey</a></li>
   </ul>
   <div class="nav-cta-wrap"><a href="#contact" class="nav-cta">Join the Waitlist</a></div>
 </nav>
@@ -566,7 +568,6 @@ footer{background:var(--dark);padding:76px 72px 40px;}
         <li><a href="#about">The Healer</a></li>
         <li><a href="#medicine">The Work</a></li>
         <li><a href="#work">Pilgrimages</a></li>
-        <li><a href="#work">The Journey</a></li>
       </ul>
     </div>
     <div class="footer-col">
